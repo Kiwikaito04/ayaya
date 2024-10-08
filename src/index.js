@@ -2,9 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+
 import reportWebVitals from './reportWebVitals';
 
+// Lấy div có id root, đồ dữ liệu vào
 const root = ReactDOM.createRoot(document.getElementById('root'));
+//Đổ component từ App vào
 root.render(
   <React.StrictMode>
     <App />
