@@ -1,42 +1,21 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
-import Product from './components/Product';
+import Home from './Home';
+import Schedule from './Schedule';
 
 function App() {
+  const [count, setCount] = useState(0);
+
   return (
-    <div>
-      <Header />
-      <div
-        class="row justify-content-center align-items-center g-2"
-      >
-        <div class="col"> <Product /> </div>
-        <div class="col"> <Product /> </div>
-        <div class="col"> <Product /> </div>
-      </div>
-      
-      
-      {/* <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div> */}
+    <div className="App">
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/schedule" element={<Schedule />} />
+        </Routes>
+      </Router>
     </div>
-      
-  
-    
   );
 }
 
