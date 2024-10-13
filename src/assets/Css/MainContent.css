@@ -3,6 +3,7 @@
     margin: 0 auto;
     padding-top: 20px;
     height: 500px;
+    flex: 1;
   }
   
   .slideshow-image {

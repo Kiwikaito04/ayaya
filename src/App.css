@@ -1,6 +1,12 @@
 body {
   margin: 0;
+  height: 100%;
   font-family: Arial, sans-serif;
+}
+
+.Home{
+  margin: 0 auto;
+  max-height: 2000px;
 }
 
 .App {
