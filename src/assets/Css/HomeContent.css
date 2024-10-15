@@ -1,77 +1,20 @@
-<<<<<<< HEAD
-=======
 .MainContent {
   height: auto;
   max-width: 100%;
 }
->>>>>>> d3f51ce79ae46e11510f580f38d6ed4e9d3d1162
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .MainContent {
-  height: auto;
-  max-width: 100%;
-}
 .slideshow-image {
-<<<<<<< HEAD
-  width:50%;
-  height: fit-content;
-  padding: 30px;
-  display: inline-block;
-=======
   width: 50%;
   height: fit-content;
   padding: 30px;
   display: inline-block;
 }
->>>>>>> d3f51ce79ae46e11510f580f38d6ed4e9d3d1162
 
-}
 .slider {
-<<<<<<< HEAD
- display: inline-block;
- width: 100%;
- height: 250px;
-}
-.slider img{
-=======
   display: inline-block;
->>>>>>> d3f51ce79ae46e11510f580f38d6ed4e9d3d1162
   width: 100%;
   height: 250px;
 }
-.search-container {
-  width: 50%;
-  border: solid;
-  border-color: #3421e7;
-  border-radius: 5px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-}
-.search-container h5 {
-  text-align: justify;
-  margin-left: 12px;
-  font-size: 15px;
-} */
-/* 
-
 
 .slider img {
   width: 100%;
@@ -81,19 +24,12 @@
 /* Center the search-container */
 .search-container {
   width: 50%;
-  margin-left: 250px;
   border: solid;
   border-color: #3421e7;
   border-radius: 5px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-<<<<<<< HEAD
-  
-}
-
-=======
   margin: 0 auto; /* This will center it */
 }
->>>>>>> d3f51ce79ae46e11510f580f38d6ed4e9d3d1162
 
 .search-container h5 {
   text-align: justify;
@@ -217,7 +153,199 @@
   width: 51%;
   margin: 20px auto; /* Use auto to center */
   display: block;
-<<<<<<< HEAD
+}
+hr{
+  width: 50%;
+  margin:  auto;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .MainContent {
+  height: auto;
+  max-width: 100%;
+}
+.slideshow-image {
+  width:50%;
+  height: fit-content;
+  padding: 30px;
+  display: inline-block;
+
+}
+.slider {
+ display: inline-block;
+ width: 100%;
+ height: 250px;
+}
+.slider img{
+  width: 100%;
+  height: 250px;
+}
+.search-container {
+  width: 50%;
+  border: solid;
+  border-color: #3421e7;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+.search-container h5 {
+  text-align: justify;
+  margin-left: 12px;
+  font-size: 15px;
+} */
+/* 
+
+
+.search-container {
+  width: 50%;
+  margin-left: 250px;
+  border: solid;
+  border-color: #3421e7;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  
+}
+
+
+.search-container h5 {
+  text-align: justify;
+  margin-left: 12px;
+  font-size: 20px;
+}
+
+.search-city select,
+.search-nights select {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 300px;
+  text-align: center;
+  margin-left: 60px;
+}
+
+.search-label {
+  text-align: justify;
+  padding: 20px;
+
+}
+
+.search-dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.dropdown-btn {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 300px;
+  text-align: center;
+  display: inline-flex;
+}
+
+.dropdown-content {
+  background-color: #f9f9f9;
+  width: 300px;
+  top: 100%;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-left: auto;
+  border-radius: 5px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter button {
+  width: 40px;
+  height: 40px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.counter button:hover {
+  background-color: #ccc;
+}
+
+.counter span {
+  margin: 0 10px;
+  font-size: 16px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.search-button {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-button button {
+  background-color: #3421e7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.search-button button:hover {
+  background-color: #290baf;
+}
+
+.promotion-container{
+  margin: 20px;
+}
+.promotion-vn{
+  width: 51%;
+  display: block;
   margin-left: 420px;
 }
 .promotion-global{
@@ -225,6 +353,3 @@
   display: block;
   margin-left: 420px;
 } */
-=======
-}
->>>>>>> d3f51ce79ae46e11510f580f38d6ed4e9d3d1162

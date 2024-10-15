@@ -21,7 +21,7 @@ function PrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "black"}}
+      style={{ ...style, display: "block", background: "black" }}
       onClick={onClick}
     />
   );
@@ -185,12 +185,12 @@ function HomeContent() {
               </div>
             </div>
           )}
+          </div>
+          <div className='search-button'>
+                <button>Tìm kiếm</button>
+          </div>
         </div>
-        
-        <div className='search-button'>
-          <button>Tìm kiếm</button>
-        </div>
-      </div>
+        <hr />
 
       <div className='promotion-container'>
       <div className='promotion-vn'>
@@ -203,6 +203,7 @@ function HomeContent() {
           ))}
       </Slider>
       </div> 
+      <hr />
 
       <div className='promotion-global'>
         <h2>Các điểm đến quốc tế nổi tiếng</h2>
@@ -215,6 +216,7 @@ function HomeContent() {
       </Slider>
       </div>
       </div>
+      <hr />
       <div className='reason-container'>
       <div className='promotion-ads'>
         <h2>Tại sao nên đặt chỗ tại đây?</h2>
