@@ -215,7 +215,7 @@ function HomeContent() {
       </div>
       <div className='reason-container'>
       <div className='promotion-ads'>
-        <h2>Tại sao nên đặt chỗ tai day?</h2>
+        <h2>Tại sao nên đặt chỗ tại đây?</h2>
       </div>
       </div>
 
