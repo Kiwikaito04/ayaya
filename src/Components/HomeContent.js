@@ -21,7 +21,7 @@ function PrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "black" }}
+      style={{ ...style, display: "block", background: "black"}}
       onClick={onClick}
     />
   );
@@ -95,6 +95,8 @@ function HomeContent() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />
   };
   const settings2 = {
     className: "center",
@@ -192,7 +194,7 @@ function HomeContent() {
 
       <div className='promotion-container'>
       <div className='promotion-vn'>
-        <h2>các điểm đến nội địa nổi tiếng</h2>
+        <h2>Các điểm đến nội địa nổi tiếng</h2>
         <Slider {...settings2}>
         {locationvn.map((image, index) => (
             <div key={index}>
@@ -203,7 +205,7 @@ function HomeContent() {
       </div> 
 
       <div className='promotion-global'>
-        <h2>các điểm đến quốc tế nổi tiếng</h2>
+        <h2>Các điểm đến quốc tế nổi tiếng</h2>
         <Slider {...settings2}>
         {locationglobal.map((image, index) => (
             <div key={index}>
