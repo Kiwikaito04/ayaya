@@ -4,6 +4,29 @@ import '../assets/Css/HomeContent.css';
 import Slider from 'react-slick';
 import { hotels, city, nights } from '../data/hotelsData';
 
+
+function NextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "black"  }}
+      onClick={onClick}
+    />
+  );
+}
+
+function PrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "black" }}
+      onClick={onClick}
+    />
+  );
+}
+
 function HomeContent() {
   const [selectedCity, setSelectedCity] = useState('');
   const [selectedNights, setSelectedNights] = useState(1);
@@ -68,7 +91,9 @@ function HomeContent() {
     infinite: true,
     centerPadding: "60px",
     slidesToShow: 3,
-    speed: 500
+    speed: 500 ,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />
   }
 
   return (

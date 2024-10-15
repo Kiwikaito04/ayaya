@@ -10,10 +10,11 @@
 }
 
 .slider {
-  width: 70%;
+  width: 51%;
   height: 250px;
   border-radius: 10px;
   padding: auto;
+  margin-left: 134px;
 }
 
 .slideshow-image img {
@@ -156,7 +157,7 @@
   margin: 20px;
 }
 .promotion-vn{
-  width: 50%;
+  width: 51%;
   display: block;
-  margin-left: 25%;
+  margin-left: 420px;
 }
