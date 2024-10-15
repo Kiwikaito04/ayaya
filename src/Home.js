@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './Components/Navbar'
-import MainContent from './Components/MainContent';
+import HomeContent from './Components/HomeContent';
 import Footer from './Components/Footer'
 
 
@@ -9,7 +9,7 @@ function Home() {
   return (
     <div className="Home">
         <Navbar />
-        <MainContent />
+        <HomeContent />
         <Footer />
     </div>  )
 }

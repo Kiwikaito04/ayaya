@@ -6,9 +6,9 @@
     justify-content: space-between;
     align-items: center; 
     width: 100%;
-    position: fixed; /* cái này để xài cái bottom cho việc fix nè */
-    bottom: 0; /*fix footer không nằm xuống dưới cùng nè*/
-    box-sizing: border-box; /*có thể sẽ cần :)) */
+    /* position: fixed; cái này để xài cái bottom cho việc fix nè */
+    /* bottom: 0; fix footer không nằm xuống dưới cùng nè
+    box-sizing: border-box; có thể sẽ cần :)) */
   }
 
   .contact-info, .app-download {
