@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+.MainContent {
+  height: auto;
+  max-width: 100%;
+}
+>>>>>>> d3f51ce79ae46e11510f580f38d6ed4e9d3d1162
 
 
 
@@ -24,18 +31,30 @@
   max-width: 100%;
 }
 .slideshow-image {
+<<<<<<< HEAD
   width:50%;
   height: fit-content;
   padding: 30px;
   display: inline-block;
+=======
+  width: 50%;
+  height: fit-content;
+  padding: 30px;
+  display: inline-block;
+}
+>>>>>>> d3f51ce79ae46e11510f580f38d6ed4e9d3d1162
 
 }
 .slider {
+<<<<<<< HEAD
  display: inline-block;
  width: 100%;
  height: 250px;
 }
 .slider img{
+=======
+  display: inline-block;
+>>>>>>> d3f51ce79ae46e11510f580f38d6ed4e9d3d1162
   width: 100%;
   height: 250px;
 }
@@ -54,6 +73,12 @@
 /* 
 
 
+.slider img {
+  width: 100%;
+  height: 250px;
+}
+
+/* Center the search-container */
 .search-container {
   width: 50%;
   margin-left: 250px;
@@ -61,14 +86,19 @@
   border-color: #3421e7;
   border-radius: 5px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+<<<<<<< HEAD
   
 }
 
+=======
+  margin: 0 auto; /* This will center it */
+}
+>>>>>>> d3f51ce79ae46e11510f580f38d6ed4e9d3d1162
 
 .search-container h5 {
   text-align: justify;
   margin-left: 12px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .search-city select,
@@ -86,13 +116,11 @@
 .search-label {
   text-align: justify;
   padding: 20px;
-
 }
 
 .search-dropdown {
   position: relative;
   display: inline-block;
-  
 }
 
 .dropdown-btn {
@@ -123,7 +151,6 @@
   padding: 10px 0;
   border-bottom: 1px solid #ccc;
   text-align: center;
-
 }
 
 .item:last-child {
@@ -180,12 +207,17 @@
   background-color: #290baf;
 }
 
-.promotion-container{
+.promotion-container {
   margin: 20px;
 }
-.promotion-vn{
+
+/* Center the promotions */
+.promotion-vn,
+.promotion-global {
   width: 51%;
+  margin: 20px auto; /* Use auto to center */
   display: block;
+<<<<<<< HEAD
   margin-left: 420px;
 }
 .promotion-global{
@@ -193,3 +225,6 @@
   display: block;
   margin-left: 420px;
 } */
+=======
+}
+>>>>>>> d3f51ce79ae46e11510f580f38d6ed4e9d3d1162
