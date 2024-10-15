@@ -4,6 +4,29 @@ import '../assets/Css/HomeContent.css';
 import Slider from 'react-slick';
 import { hotels, city, nights } from '../data/hotelsData';
 
+
+function NextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "black"  }}
+      onClick={onClick}
+    />
+  );
+}
+
+function PrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "black" }}
+      onClick={onClick}
+    />
+  );
+}
+
 function HomeContent() {
   const [selectedCity, setSelectedCity] = useState('');
   const [selectedNights, setSelectedNights] = useState(1);
@@ -51,6 +74,17 @@ function HomeContent() {
     require ('../assets/location/vn/Ho Chi Minh.jpeg'),
   ]
 
+  const locationglobal =[
+    require ('../assets/location/global/bali.jpeg'),
+    require ('../assets/location/global/bangkok.jpeg'),
+    require ('../assets/location/global/chiangmai.jpeg'),
+    require ('../assets/location/global/kuala lumpur.jpeg'),
+    require ('../assets/location/global/osaka.jpeg'),
+    require ('../assets/location/global/phuket.jpeg'),
+    require ('../assets/location/global/Seoul.jpeg'),
+    require ('../assets/location/global/singapore.jpeg'),
+    require ('../assets/location/global/Tokyo.jpeg'),
+  ]
 
 
   const settings = {
@@ -68,7 +102,9 @@ function HomeContent() {
     infinite: true,
     centerPadding: "60px",
     slidesToShow: 3,
-    speed: 500
+    speed: 500 ,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />
   }
 
   return (
@@ -156,7 +192,7 @@ function HomeContent() {
 
       <div className='promotion-container'>
       <div className='promotion-vn'>
-        <h2>Giá tốt tại các điểm đến nội địa</h2>
+        <h2>các điểm đến nội địa nổi tiếng</h2>
         <Slider {...settings2}>
         {locationvn.map((image, index) => (
             <div key={index}>
@@ -167,12 +203,19 @@ function HomeContent() {
       </div> 
 
       <div className='promotion-global'>
-        <h2>Giá tốt tại các điểm đến quốc tế</h2>
+        <h2>các điểm đến quốc tế nổi tiếng</h2>
+        <Slider {...settings2}>
+        {locationglobal.map((image, index) => (
+            <div key={index}>
+              <img src={image} alt={`slide-${index}`} />
+            </div>
+          ))}
+      </Slider>
       </div>
       </div>
       <div className='reason-container'>
       <div className='promotion-ads'>
-        <h2>Tại sao nên đặt chỗ tai day?</h2>
+        <h2>Tại sao nên đặt chỗ tại đây?</h2>
       </div>
       </div>
 
