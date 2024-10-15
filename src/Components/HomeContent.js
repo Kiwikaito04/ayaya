@@ -74,6 +74,17 @@ function HomeContent() {
     require ('../assets/location/vn/Ho Chi Minh.jpeg'),
   ]
 
+  const locationglobal =[
+    require ('../assets/location/global/bali.jpeg'),
+    require ('../assets/location/global/bangkok.jpeg'),
+    require ('../assets/location/global/chiangmai.jpeg'),
+    require ('../assets/location/global/kuala lumpur.jpeg'),
+    require ('../assets/location/global/osaka.jpeg'),
+    require ('../assets/location/global/phuket.jpeg'),
+    require ('../assets/location/global/Seoul.jpeg'),
+    require ('../assets/location/global/singapore.jpeg'),
+    require ('../assets/location/global/Tokyo.jpeg'),
+  ]
 
 
   const settings = {
@@ -181,7 +192,7 @@ function HomeContent() {
 
       <div className='promotion-container'>
       <div className='promotion-vn'>
-        <h2>Giá tốt tại các điểm đến nội địa</h2>
+        <h2>các điểm đến nội địa nổi tiếng</h2>
         <Slider {...settings2}>
         {locationvn.map((image, index) => (
             <div key={index}>
@@ -192,7 +203,14 @@ function HomeContent() {
       </div> 
 
       <div className='promotion-global'>
-        <h2>Giá tốt tại các điểm đến quốc tế</h2>
+        <h2>các điểm đến quốc tế nổi tiếng</h2>
+        <Slider {...settings2}>
+        {locationglobal.map((image, index) => (
+            <div key={index}>
+              <img src={image} alt={`slide-${index}`} />
+            </div>
+          ))}
+      </Slider>
       </div>
       </div>
       <div className='reason-container'>
