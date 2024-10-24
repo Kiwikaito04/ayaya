@@ -5,16 +5,18 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Home from './Home';
 import Schedule from './Schedule';
+import Server from './Server'
 
 function App() {
   const [count, setCount] = useState(0);
-
+  
   return (
     <div className="App">
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/schedule" element={<Schedule />} />
+          <Route path="/server" element={<Server />} />
         </Routes>
       </Router>
     </div>
