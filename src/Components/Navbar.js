@@ -1,9 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';  // Lưu ý import Link từ 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom'; 
 import '../assets/Css/Navbar.css';
 import logo from '../assets/logo.png';
 
 function Navbar() {
+  const [username, setUsername] = useState('');
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Lấy tên người dùng từ localStorage khi component được tải
+    const storedUsername = localStorage.getItem('username');
+    if (storedUsername) {
+      setUsername(storedUsername);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    // Xóa tên người dùng khỏi localStorage và chuyển hướng về trang chủ
+    localStorage.removeItem('username');
+    setUsername('');
+    navigate('/');
+  };
+
   return (
     <nav className="navbar">
       <ul className="navbar-left">
@@ -17,8 +35,17 @@ function Navbar() {
         <img src={logo} alt="Xe Dai Nam" className="logo" />
       </div>
       <div className="loginbtn">
-        <button>Đăng Nhập</button>
-        <button>Đăng ký</button>
+        {username ? (
+          <>
+            <span>{username}</span>
+            <button onClick={handleLogout}>Đăng xuất</button>
+          </>
+        ) : (
+          <>
+            <button><Link to='/login'>Đăng Nhập</Link></button>
+            <button><Link to='/signup'>Đăng ký</Link></button>
+          </>
+        )}
       </div>
     </nav>
   );
