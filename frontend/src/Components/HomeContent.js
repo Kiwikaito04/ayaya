@@ -3,6 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import '../assets/Css/HomeContent.css';
 import Slider from 'react-slick';
 import { hotels, city, nights } from '../data/hotelsData';
+import card from '../assets/icon/card.jpg';
+import sales from '../assets/icon/sales.jpg';
+import support from '../assets/icon/support.jpg';
+import viewer from '../assets//icon/viewer.jpg';
 
 
 function NextArrow(props) {
@@ -218,8 +222,29 @@ function HomeContent() {
       </div>
       <hr />
       <div className='reason-container'>
-      <div className='promotion-ads'>
-        <h2>Tại sao nên đặt chỗ tại đây?</h2>
+      <h2>Tại sao nên đặt chỗ tại đây?</h2>
+      <div className='reason-ads'>
+        <div className='reason'>
+          <img src={sales}  alt='sales'/>
+          <h2>Giá rẻ mỗi ngày với ưu đãi đặc biệt dành riêng cho ứng dụng</h2>
+          <p>Đặt phòng qua ứng dụng để nhận giá tốt nhất với các khuyến mãi tuyệt vời!</p>
+        </div>
+        <div className='reason'>
+          <img src={card}  alt='card'/>
+          <h2>Phương thức thanh toán an toàn và linh hoạt</h2>
+          <p>Giao dịch trực tuyến an toàn với nhiều lựa chọn như thanh toán tại cửa hàng tiện lợi, chuyển khoản ngân hàng, thẻ tín dụng đến Internet Banking. Không tính phí giao dịch. </p>
+        </div>
+        <div className='reason'>
+          <img src={support}  alt='support'/>
+          <h2>Hỗ trợ khách hàng 24/7</h2>
+          <p>Đội ngũ nhân viên hỗ trợ khách hàng luôn sẵn sàng giúp đỡ bạn trong từng bước của quá trình đặt vé</p>
+        </div>
+        <div className='reason'>
+          <img src={viewer}  alt='viewer'/>
+          <h2>Khách thực, đánh giá thực</h2>
+          <p>Hơn 10.000.000 đánh giá, bình chọn đã được xác thực từ du khách sẽ giúp bạn đưa ra lựa chọn đúng đắn. </p>
+        </div>
+
       </div>
       </div>
 
