@@ -157,15 +157,7 @@
 hr{
   width: 50%;
   margin:  auto;
-  border-top: 1px solid black;
-}
-.reason-container{
-  width: 100%;
-}
-.reason-ads{
-  display: inline-flex;
-  width: 50%;
-  gap: 20px;
+  
 }
 
 
