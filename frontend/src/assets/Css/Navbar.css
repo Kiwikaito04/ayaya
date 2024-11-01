@@ -1,66 +1,106 @@
 body {
   font-family: Arial, sans-serif;
+  margin: 0
 }
 
 .navbar {
   display: flex;
   height: 20%;
   justify-content: space-between;
-  background-color: #ff5722;
+  background-color: #007bff; 
   padding: 10px;
   color: white;
   height: 150px;
   width: auto;
+  border-radius: 10px;
 }
 
 .logo {
-margin-right: 150px;
-width: 150px;
-height: 150px;
+  margin-right: 150px;
+  width: 150px;
+  height: 150px;
 }
-
-
 
 .navbar-left {
   display: flex;
   list-style: none;
-  margin-top: 50px;
+  align-items: flex-end; 
+  padding-left: 0;
 }
 
 .navbar-left li {
   margin-right: 20px;
+  position: relative;
+  margin-top: 20px;
 }
 
 .navbar-left li a {
   color: white;
   text-decoration: none;
+  font-weight: bold; 
+  padding: 10px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.logo-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-10%);
+.navbar-left li a:hover,
+.navbar-left li.active a {     /*CẤM ĐỤNG VÀO*/
+  background-color: #0056b3;  
+  color: white;
+  border-radius: 5px; 
 }
-
-.logo {
-  width: 150px;
-  height:150px;
-}
-
-
 
 .loginbtn {
   margin-right: 15px;
 }
+
 .loginbtn button {
-  margin-top: 50px;
-  margin-left: 10px;
-  padding: 5px 10px;
-  
+    /* margin-top: 50px;
+    margin-left: 10px; */
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
 }
-.app-download button {
-  margin: 0 5px;
+
+.loginbtn button a {
+  color: inherit; /*lấy màu color button*/
+  text-decoration: none;
+}
+
+.loginbtn button:hover {
+  background-color: #003d82;
+  color: #ffffff; /* Màu chữ khi hover */
+}
+
+.NameHotel {
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 10px;
+}
+
+/*Dành riêng cho NameHotel*/
+.NameHotel a {
+  color: white !important; /*tăng uư tiên màu bằng important để không bị lấn bởi mấy cái trên kia (và cũng không đụng vào)*/
+  text-decoration: none !important;
+  font-weight: bold !important;
+  font-size: 24px !important; 
+  background-color: transparent !important; 
+  pointer-events: auto; 
 }
 
 
-
+.NameHotel a:hover,
+.NameHotel a:focus,
+.NameHotel a:active {
+  background-color: transparent !important;
+  color: white !important; 
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important; 
+}

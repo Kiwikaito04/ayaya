@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; 
+import { Link, useNavigate, useLocation } from 'react-router-dom'; 
 import '../assets/Css/Navbar.css';
 import logo from '../assets/logo.png';
 
 function Navbar() {
   const [username, setUsername] = useState('');
   const navigate = useNavigate();
+  const location = useLocation(); //Dùng cái này để lấy location cho link
 
   useEffect(() => {
     // Lấy tên người dùng từ localStorage khi component được tải
@@ -25,15 +26,26 @@ function Navbar() {
   return (
     <nav className="navbar">
       <ul className="navbar-left">
-        <li><Link to="/">Trang chủ</Link></li>
-        <li><Link to="/schedule">Lịch trình</Link></li>
-        <li><a href="/">Tra cứu vé</a></li>
-        <li><a href="/">Hóa đơn</a></li>
-        <li><a href="/">Về chúng tôi</a></li>
+        <li className="NameHotel"><Link to="/">Ayaya's Hotel</Link></li>
+        <li className={location.pathname === "/" ? "active" : ""}>
+          <Link to="/">Trang chủ</Link>
+        </li>
+        <li className={location.pathname === "/schedule" ? "active" : ""}>
+          <Link to="/schedule">Lịch trình</Link>
+        </li>
+        <li className={location.pathname === "/lookup" ? "active" : ""}>
+          <a href="/">Tra cứu vé</a>
+        </li>
+        <li className={location.pathname === "/invoice" ? "active" : ""}>
+          <a href="/">Hóa đơn</a>
+        </li>
+        <li className={location.pathname === "/about" ? "active" : ""}>
+          <a href="/">Về chúng tôi</a>
+        </li>
       </ul>
-      <div className="logo-container">
+      {/* <div className="logo-container">
         <img src={logo} alt="Xe Dai Nam" className="logo" />
-      </div>
+      </div> */}
       <div className="loginbtn">
         {username ? (
           <>

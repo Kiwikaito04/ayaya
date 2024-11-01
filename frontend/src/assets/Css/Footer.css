@@ -1,21 +1,42 @@
 .footer {
-    background-color: #ff5722;
-    color: white;
-    padding: 10px 20px; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    width: 100%;
-    /* position: fixed;   */
-    bottom: 0;  
-    box-sizing: border-box;  
-  }
+  background-color: #007bff; 
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  bottom: 0;
+  box-sizing: border-box;
+}
 
-  .contact-info, .app-download {
-    flex: none; 
-    min-width: 278px;
-    width: 33.33%;
-    box-sizing: border-box; 
-    padding: 10px; 
-    text-align: center; 
+.contact-info, .app-download {
+  flex: none;
+  min-width: 278px;
+  width: 33.33%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+
+.app-download button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app-download button a {
+  color: inherit; /*lấy màu color button*/
+  text-decoration: none;
+}
+
+.app-download button:hover {
+  background-color: #003d82;
+  color: #ffffff;
 }
