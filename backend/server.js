@@ -145,10 +145,12 @@ app.use(express.json());
 // Import routes
 const authRoutes = require('./routes/authRoutes');
 const roomRoutes = require('./routes/roomRoutes');
+const roomTypeRoutes = require('./routes/roomTypeRoutes');
 
 // Use routes
 app.use(authRoutes);
 app.use(roomRoutes);
+app.use(roomTypeRoutes);
 
 app.listen(8081, () => {
     console.log("Server is running on port 8081");

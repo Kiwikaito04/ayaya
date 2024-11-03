@@ -8,6 +8,7 @@ import Schedule from './Schedule';
 import Login from './Components/Login';
 import Signup from './Components/Signup'
 import About from './About';
+import RoomSearch from './RoomSearch';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,6 +22,8 @@ function App() {
           <Route path='/signup' element={<Signup />} />
           <Route path='/login' element={<Login />} />
           <Route path="/about" element={<About />} />
+          <Route path="/lookup" element={<RoomSearch />} />
+
         </Routes>
       </Router>
     </div>

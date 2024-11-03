@@ -101,7 +101,7 @@ function Navbar() {
           <Link to="/schedule">Lịch trình</Link>
         </li>
         <li className={location.pathname === "/lookup" ? "active" : ""}>
-          <a href="/">Tra cứu vé</a>
+          <a href="/lookup">Tra cứu khách sạn</a>
         </li>
         {/* Chỉ hiển thị phần Hóa đơn nếu đã đăng nhập */}
         {username && (

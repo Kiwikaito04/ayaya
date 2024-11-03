@@ -47,3 +47,27 @@ exports.deleteRoom = (req, res) => {
         return res.json({ message: "Room deleted successfully" });
     });
 };
+
+// Tìm kiếm Phòng
+exports.searchRooms = (req, res) => {
+    const { type, available } = req.query;
+    let sql = "SELECT * FROM Rooms WHERE 1=1"; // Dùng 1=1 để dễ dàng thêm điều kiện
+
+    const queryParams = [];
+    
+    if (type) {
+        sql += " AND RoomType = ?";
+        queryParams.push(type);
+    }
+
+    if (available !== undefined) {
+        sql += " AND Available = ?";
+        queryParams.push(available === 'true' ? 1 : 0);
+    }
+
+    db.query(sql, queryParams, (err, results) => {
+        if (err) return res.status(500).json({ error: "Error fetching rooms" });
+        return res.json(results);
+    });
+};
+
