@@ -149,7 +149,7 @@ const roomTypeRoutes = require('./routes/roomTypeRoutes');
 
 // Use routes
 app.use(authRoutes);
-app.use(roomRoutes);
+app.use( '/api/rooms',roomRoutes);
 app.use(roomTypeRoutes);
 
 app.listen(8081, () => {

@@ -33,9 +33,9 @@ function AboutContent() {
                     <h2 style={{ color: '#007bff' }}>GIÁ TRỊ CỐT LÕI</h2>
                     <p>Giá trị cốt lõi <a style={{ color: '#007bff', fontWeight: 'bold' }}>- AYAYA HOTEL</a></p>
                     <ul>
-                        <li><p><a style={{ color: '#007bff', fontWeight: 'bold' }}>A: </a>Tượng trưng cho sự ấm áp, thân thiện và hiếu khách.</p></li>
-                        <li><p><a style={{ color: '#007bff', fontWeight: 'bold' }}>Y: </a>Tượng trưng cho sự tinh tế và chu đáo trong từng chi tiết.</p></li>
-                        <li><p><a style={{ color: '#007bff', fontWeight: 'bold' }}>AYA: </a>Kết nối mọi người qua những trải nghiệm tuyệt vời và dịch vụ hoàn hảo.</p></li>
+                        <li><p>thân thiện và hiếu khách.</p></li>
+                        <li><p>tinh tế và chu đáo trong từng chi tiết.</p></li>
+                        <li><p>Kết nối mọi người qua những trải nghiệm tuyệt vời và dịch vụ hoàn hảo.</p></li>
                     </ul>
                 </div>
                 <div className="body-image"><img src={about2} height="100%" width={400} alt="Ayaya Hotel" /></div>
