@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh; 
+    /* overflow: hidden; tắt cuộn cho body */
+}
+
+
+.RM_background-image {
+    background: url('../../assets/ayayatest.png') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(8px); /*làm mờ*/
+    position: absolute; /* cố định tuyệt đối */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0; /*xuống 1 lớp*/
+}
+
+
+.RM_container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(240, 248, 255, 0.9); /* Tạo độ trong cho form so với nền để làm màu*/
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative; 
+    z-index: 1; /* lên 1 lớp */
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    max-width: 400px; 
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+    margin: 20px auto; 
+    padding: 10px;
+}
+
+
+.RM_label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5px; 
+}
+
+
+input[type="number"] {
+    width: 100%;
+    max-width: 250px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+/* .RM_label.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 10px; 
+} */
+
+
+.RM_message {
+    background-color: #dff0d8;
+    padding: 10px;
+    border-radius: 4px;
+    color: #3c763d;
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin: 10px auto;
+    font-size: 14px;
+}
+
+
+/* input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+} */
+
+
+ /*----------------đang test khúc này--------------------------*/
+ .RM_ul {
+    list-style-type: none; /* Xóa dấu chấm đầu dòng */
+    padding: 0; /* Xóa padding mặc định */
+    margin: 20px 0; /* Tạo khoảng cách cho danh sách */
+}
+
+.RM_ul li {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px; 
+    margin: 10px auto;
+    /* transition: background-color 0.3s; */ /*Đang làm màu*/
+}
+
+.RM_ul button {
+    padding: 6px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px; 
+}
+
+.RM_ul button:hover {
+    background-color: #f0f0f0; 
+}
+
+.edit {
+    background-color: #1e90ff; 
+    color: white;
+}
+
+.delete {
+    background-color: #dc3545; 
+    color: white;
+}
+
+/*---------------------------------------------------*/
+
+.RM_message {
+    background-color: #dff0d8;
+    padding: 10px;
+    border-radius: 4px;
+    color: #3c763d;
+    margin-bottom: 20px;
+    max-width: 500px; 
+    margin: 10px auto;
+    font-size: 14px; 
+}
+
+.submit_button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #1e90ff;
+    color: white;
+    margin-top: 10px; 
+}
+
+.submit_button:hover{
+    background-color: aqua;
+}
+
+/* .RM_message:hover {
+    background-color: #104e8b;
+} */
+
+.pagenumber button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #1e90ff;
+    color: white;
+    margin-top: 10px; 
+}
+
+.pagenumber button:hover{
+    background-color: aqua;
+}
+
+.line {
+    border: none;
+    border-top: 2px dashed #ccc; 
+    margin: 20px 0; 
+    width: 80%; 
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pagenumber{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    margin-top: 20px; 
+}
+
+

@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
+import '../../assets/Css/RoomManager.css';
 
 const RoomManager = () => {
     const [rooms, setRooms] = useState([]); // Lưu trữ danh sách phòng
@@ -18,7 +19,7 @@ const RoomManager = () => {
             setTotalRooms(response.data.totalRooms);
         } catch (error) {
             console.error('Error fetching rooms:', error);
-            setMessage('Failed to fetch rooms.'); 
+            setMessage('Failed to fetch rooms.');
         }
     }, [currentPage]);
 
@@ -49,7 +50,7 @@ const RoomManager = () => {
             }
         } catch (error) {
             console.error('Error submitting room form:', error);
-            setMessage('Failed to add/update room. Please try again.'); 
+            setMessage('Failed to add/update room. Please try again.');
         }
     };
 
@@ -64,10 +65,10 @@ const RoomManager = () => {
         try {
             await axios.delete(`http://localhost:8081/api/rooms/${id}`);
             fetchRooms();
-            setMessage('Room deleted successfully!'); 
+            setMessage('Room deleted successfully!');
         } catch (error) {
             console.error('Error deleting room:', error);
-            setMessage('Failed to delete room. Please try again.'); 
+            setMessage('Failed to delete room. Please try again.');
         }
     };
 
@@ -83,51 +84,58 @@ const RoomManager = () => {
     };
 
     return (
-        <div>
-            <h2>Rooms</h2>
-            {message && <div className="message">{message}</div>} 
+        <>
+            <div className="RM_background-image"></div>
+            <div className='RM_container'>
+                <div>
+                    <h1>Rooms</h1>
+                    {message && <div className="RM_message">{message}</div>}
 
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Available:
-                    <input
-                        type="checkbox"
-                        name="Available"
-                        checked={form.Available}
-                        onChange={() => setForm({ ...form, Available: !form.Available })}
-                    />
-                </label>
-                <label>
-                    Room Type ID:
-                    <input type="number" name="ID_Type" value={form.ID_Type} onChange={handleChange} />
-                </label>
-                <label>
-                    Agency ID:
-                    <input type="number" name="ID_Agency" value={form.ID_Agency} onChange={handleChange} />
-                </label>
-                <button type="submit">{editing ? 'Update' : 'Add'} Room</button>
-                {editing && <button type="button" onClick={handleCancel}>Cancel Update</button>} {/* Nút thoát update */}
-            </form>
+                    <form onSubmit={handleSubmit}>
+                        <label className='RM_label'>
+                            Available:
+                            <input 
+                                type="checkbox"
+                                name="Available"
+                                checked={form.Available}
+                                onChange={() => setForm({ ...form, Available: !form.Available })}
+                            />
+                        </label>
+                        <label className='RM_label'>
+                            Room Type ID:
+                            <input type="number" name="ID_Type" value={form.ID_Type} onChange={handleChange} />
+                        </label>
+                        <label className='RM_label'>
+                            Agency ID:
+                            <input type="number" name="ID_Agency" value={form.ID_Agency} onChange={handleChange} />
+                        </label>
+                        <button className='submit_button' type="submit">{editing ? 'Update' : 'Add'} Room</button>
+                        {editing && <button className='cancel_button' type="button" onClick={handleCancel}>Cancel Update</button>} {/* Nút thoát update */}
+                    </form>
 
-            <h3>Room List</h3>
-            <ul>
-                {rooms.map((room) => (
-                    <li key={room.ID}>
-                        <strong>Room ID:</strong> {room.ID} <br />
-                        <strong>Type:</strong> {room.RoomType || 'N/A'} <br />
-                        <strong>Agency:</strong> {room.Agency || 'N/A'} <br />
-                        <strong>Available:</strong> {room.Available ? 'Yes' : 'No'}
-                        <button onClick={() => handleEdit(room)}>Edit</button>
-                        <button onClick={() => handleDelete(room.ID)}>Delete</button>
-                    </li>
-                ))}
-            </ul>
-            <div>
-                <button disabled={currentPage === 1} onClick={() => handlePageChange('prev')}>Previous</button>
-                <span>Page {currentPage}</span>
-                <button disabled={rooms.length < roomsPerPage} onClick={() => handlePageChange('next')}>Next</button>
+                    <hr class="line"></hr>
+
+                    <h1>Room List</h1>
+                    <ul className='RM_ul'>
+                        {rooms.map((room) => (
+                            <li key={room.ID}>
+                                <strong>Room ID:</strong> {room.ID} <br />
+                                <strong>Type:</strong> {room.RoomType || 'N/A'} <br />
+                                <strong>Agency:</strong> {room.Agency || 'N/A'} <br />
+                                <strong>Available:</strong> {room.Available ? 'Yes' : 'No'}
+                                <button className="edit" onClick={() => handleEdit(room)}>Edit</button>
+                                <button className="delete" onClick={() => handleDelete(room.ID)}>Delete</button>
+                            </li>
+                        ))}
+                    </ul>
+                    <div className='pagenumber'>
+                        <button className='pagebutton' disabled={currentPage === 1} onClick={() => handlePageChange('prev')}>Previous</button>
+                        <span>Page {currentPage}</span>
+                        <button className='pagebutton' disabled={rooms.length < roomsPerPage} onClick={() => handlePageChange('next')}>Next</button>
+                    </div>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
