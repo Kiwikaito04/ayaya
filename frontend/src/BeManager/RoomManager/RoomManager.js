@@ -24,6 +24,12 @@ const RoomManager = () => {
     }, [currentPage]);
 
     useEffect(() => {
+        document.body.classList.add('custom-body');
+
+        // Xóa lớp khi component unmount
+        return () => {
+            document.body.classList.remove('custom-body');
+        };
         fetchRooms();
     }, [fetchRooms]);
 
@@ -94,7 +100,7 @@ const RoomManager = () => {
                     <form onSubmit={handleSubmit}>
                         <label className='RM_label'>
                             Available:
-                            <input 
+                            <input
                                 type="checkbox"
                                 name="Available"
                                 checked={form.Available}
